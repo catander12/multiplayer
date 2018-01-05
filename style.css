@@ -1,0 +1,18 @@
+h1,h3,h4{
+	text-align: center;
+}
+
+.chat-container{
+  height: 200px;
+  overflow: auto;
+
+}
+
+.message{
+	width: 500px;
+	margin-top: 5px;
+}
+
+#chat_input{ 
+	margin-bottom: 30px;
+}

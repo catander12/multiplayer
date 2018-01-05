@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPS</title>
+	
+										<!-- bootstrap -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+								<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<div class="container">
+
+		<div class="row justify-content-md-center">
+			<div class="col-md-8">
+				<h1> Rock Paper sharp converging blades</h1>
+				<hr>
+			</div>
+		</div>
+		<div class="row justify-content-md-center">
+
+			<div class="col-md-3 p1">
+				<h3> Player1 </h3>
+				<br>
+				<h4 id="p1_name"></h4>
+
+				<div class="col-sm-3">
+					<p id="p1_wins">Wins: 0</p>
+					<p id="p1_losses">Losses: 0</p>
+				</div>
+			</div>	
+
+			<div class="col-md-2 ">
+
+
+			</div>
+
+
+			<div class="col-md-3 p2">
+				
+				<h3> Player2 </h3>
+				<br>
+				<h4 id="p2_name"></h4>
+
+
+				<div class="col-sm-3">
+					<p id="p2_wins"> Wins: 0</p>
+					<p id="p2_losses"> Losses: 0</p>
+				</div>
+			</div>	
+				
+		</div>
+
+		<br>
+			
+		<div class="row justify-content-md-center">
+			
+			<div  class="col-md-3">
+				<button class="btn btn-info btn-lg btn-block">Rock</button>
+			</div>
+
+			<div  class="col-md-3">
+				<button class="btn btn-info btn-lg btn-block">Paper</button>
+			</div>
+
+			<div  class="col-md-3">
+				<button class="btn btn-info btn-lg btn-block">Scissors</button>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row justify-content-md-center">
+
+			<div class="col-md-8 chat-container" id="chat">
+
+			</div>
+
+		</div>
+
+		<div class="row justify-content-md-center">
+			
+			<div class="col-md-9">
+					
+    			<input class="form-control" id="chat_input" ></input>
+  	
+			</div>
+
+		</div>
+
+		
+
+	</div>
+									<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+						<!-- fire base -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+			<!-- javascript -->
+	<script src="game.js"></script>
+</body>
+</html>
