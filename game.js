@@ -8,21 +8,30 @@
     messagingSenderId: "808722094804"
   };
   firebase.initializeApp(config);
-
+var username = "Guest";
 var db = firebase.database();
 
-var username = prompt("Please enter a username.","Ugly");
-
+login();
+function login(){
+		username = prompt("Please enter a username.","Guest");
+		var test = db.ref("Players").child(username);
+		console.log(test);
+		if(test != undefined){
+			console.log("hooray");
+			
+		}
+	}
 
 $('#chat_input').keypress(function(event){
 
 
 	var keycode = (event.keyCode ? event.keyCode : event.which);
+
 	if(keycode == '13'){
 
 		var text = $("#chat_input").val();
 		$("#chat_input").val("");
-		db.ref().push({
+		db.ref("Chat").push({
 			user: username,
 			message: text
 		});
@@ -31,9 +40,8 @@ $('#chat_input').keypress(function(event){
 
 });
 
-firebase.database().ref().on("child_added", function(childSnapshot) {
+firebase.database().ref("Chat").on("child_added", function(childSnapshot) {
 	var chat = childSnapshot.val();
-
 	var message = chat.user + ": " + chat.message;
 
 	var box = $("<div class='message'>");
